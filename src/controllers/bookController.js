@@ -9,7 +9,7 @@ const createBook= async function (req, res) {
 
 const getBooksData= async function (req, res) {
     let allBooks= await BookModel.find(  { authorName : "SK" , isPublished: true }  )
-    res.send({msg: allBooks})
+    res.send({data: allBooks,msg:"data  fetch"});
 }
 
 module.exports.createBook= createBook
